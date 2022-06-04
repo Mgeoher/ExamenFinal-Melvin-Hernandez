@@ -9,7 +9,7 @@ public class Menu  extends IngresoDatosDepartamentos {
         do {
             System.out.println("Escribe una opcion");
             System.out.println("1-Ingresar Datos "+"2-Historial de Datos en forma de lista "+"3-Limpiar Historial de lista "
-                    + "4-Historial en forma de Vectores  " +"0-Salir");
+                    + "4-Historial en forma de Vectores  " + "5-Historial de Datos en posiciones impares" +"0-Salir");
             int opcion = sc.nextInt();
 
             switch (opcion) {
@@ -50,9 +50,9 @@ public class Menu  extends IngresoDatosDepartamentos {
 
                     }while (regresar);
                     break;
-                //case 5:
-                   // this.buscarVector();
-                    //break;
+                case 5:
+                    this.paresImpares();
+                    break;
                         case 0:
                             System.out.println("Vuelva pronto");
                             salir = true;

@@ -1,6 +1,3 @@
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +11,7 @@ public class RegistroMustraDatos {
 
     String[] departamentos ;
     String[] municipio ;
+    int datos[]={1,2,3,4,5,6,7,8,9};
     protected int indice;
 
     public RegistroMustraDatos() {
@@ -83,6 +81,29 @@ public class RegistroMustraDatos {
         }
     }
 
+    static int datosParImpar(String[] t, int pos) {
+        int res;
+        if (pos < t.length) {
+            if (pos % 2 == 0) {
+
+            } else {
+                System.out.println(t[pos] + " esta en una pocision impar");
+            }
+            datosParImpar(t, pos + 1);
+        }
+        return 1;
+
+    }
+
+    static int datosParImpar(String[] t)
+    {
+        return (datosParImpar(t,0));
+
+
+    }
+    public void paresImpares (){
+        datosParImpar(departamentos);
+    }
 
     }
 
