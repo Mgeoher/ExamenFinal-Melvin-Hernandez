@@ -12,8 +12,8 @@ public class RegistroMustraDatos {
     protected String municipios;
     protected String cabecera;
 
-    String[] departamentos = {departamento};
-    String[] municipio = {municipios, cabecera};
+    String[] departamentos ;
+    String[] municipio ;
     protected int indice;
 
     public RegistroMustraDatos() {
@@ -77,7 +77,7 @@ public class RegistroMustraDatos {
 
         int posicion = busquedaVector(departamentos, buscar);
         if (posicion != -1) {
-            System.out.println("El elemento " + buscar + " existe en la posición: " + posicion);
+            System.out.println("El elemento " + buscar + " existe en la posición: " + posicion + " y la cabecera departamental es " + cabecera );
         } else {
             System.out.println("El elemento  " + buscar + "  NO existe en el arreglo");
         }
