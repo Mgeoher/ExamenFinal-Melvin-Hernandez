@@ -3,24 +3,51 @@ import java.util.List;
 import java.util.Scanner;
 
 public class IngresoDatosDepartamentos {
+    List  lista = new ArrayList<>();
+    protected String departamento;
+    protected String municipios;
+    protected String cabecera;
+
+
     Scanner sc = new Scanner(System.in);
 
-    List <String> lista = new ArrayList<>();
 
-    public void departamentos (){
-        System.out.println("Ingrsa nombre del Departamento");
-        String departamento = sc.nextLine();
+
+    public void departamentos () {
+        System.out.println("Ingresa nombre del Departamento");
+        departamento = sc.nextLine();
         System.out.println("Ingresa la Cantidad de municipios");
-        String cantidad = sc.nextLine();
+        municipios = sc.nextLine();
         System.out.println("Ingresa el nombre de la cabecera");
-        String cabecera = sc.nextLine();
+        cabecera = sc.nextLine();
 
-        lista.add( "Departamento: "+ departamento);
-        lista.add("Cantidad de Municipios: " + cantidad);
-        lista.add("Cabesera Departamental " + cabecera);
         lista.add("");
-
-        return ;
+        lista.add(departamento);
+        lista.add(municipios);
+        lista.add(cabecera);
+        lista.add("");
     }
 
+
+    public void mostrarLista (){
+
+        for (int i = 0; i <= lista.size() - 1; i++) {
+
+            System.out.println(lista.get(i));
+
+        }
+    }
+    public  void busqueda (){
+        System.out.println("Ingrese el nombre del departamento para la busqueda");
+        String busqueda = sc.nextLine();
+
+
+
+        int indice = lista.indexOf(busqueda);
+        if (indice != -1) {
+            System.out.println("La búsqueda de " + busqueda + " está en el índice " + indice + " del historial de datos ");
+        } else {
+            System.out.println("El elemento " + busqueda + " no existe");
+        }
+    }
 }
