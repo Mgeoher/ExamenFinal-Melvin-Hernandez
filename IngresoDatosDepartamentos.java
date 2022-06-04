@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class IngresoDatosDepartamentos {
+public class IngresoDatosDepartamentos extends RegistrarDatos{
     List  lista = new ArrayList<>();
     protected String departamento;
     protected String municipios;
@@ -26,6 +26,8 @@ public class IngresoDatosDepartamentos {
         lista.add(municipios);
         lista.add(cabecera);
         lista.add("");
+
+        this.registrarDatos(departamento,municipios,cabecera);
     }
 
 
