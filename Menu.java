@@ -8,7 +8,7 @@ public class Menu  extends IngresoDatosDepartamentos {
     public void menu() {
         do {
             System.out.println("Escribe una opcion");
-            System.out.println("1-Ingresar Datos "+"2-Historial de Datos "+"3-Buequeeda de datos "+"0-Salir");
+            System.out.println("1-Ingresar Datos "+"2-Historial de Datos "+"3-Limpiar Historial "+"0-Salir");
             int opcion = sc.nextInt();
 
             switch (opcion) {
@@ -17,10 +17,23 @@ public class Menu  extends IngresoDatosDepartamentos {
                     break;
                 case 2:
                     this.mostrarLista();
+                    do {
+                        System.out.println("se encuentra el dato? "+ "1-si regresar " + "2- no " );
+                        int op1 = sc.nextInt();
+                        switch (op1){
+                            case 1: regresar = false;
+                            break;
+                            case 2:this.busqueda();
+                            break;
+                            default: System.out.println("Solo numeros 1 y 2");
+                        }
+
+                    }while (regresar);
 
                             break;
                 case 3:
-                    this.busqueda();
+                    System.out.println("Historial Limpiado");
+                    lista.clear();
                     break;
                         case 0:
                             System.out.println("Vuelva pronto");
