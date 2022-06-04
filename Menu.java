@@ -24,7 +24,7 @@ public class Menu  extends IngresoDatosDepartamentos {
                         switch (op1){
                             case 1: regresar = false;
                             break;
-                            case 2:this.busqueda();
+                            case 2:this.busquedaLista();
                             break;
                             default: System.out.println("Solo numeros 1 y 2");
                         }
@@ -36,8 +36,23 @@ public class Menu  extends IngresoDatosDepartamentos {
                     lista.clear();
                     break;
                 case 4:
-                    this.mostrarDatos();
+                    this.mostrarDatosVectores();
+                    do {
+                        System.out.println("se encuentra el dato? "+ "1-si regresar " + "2- no " );
+                        int op1 = sc.nextInt();
+                        switch (op1){
+                            case 1: regresar = false;
+                                break;
+                            case 2:this.buscarVector();
+                                break;
+                            default: System.out.println("Solo numeros 1 y 2");
+                        }
+
+                    }while (regresar);
                     break;
+                //case 5:
+                   // this.buscarVector();
+                    //break;
                         case 0:
                             System.out.println("Vuelva pronto");
                             salir = true;
